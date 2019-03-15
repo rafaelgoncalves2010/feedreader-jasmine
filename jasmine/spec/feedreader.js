@@ -99,8 +99,8 @@ $(function() {
         });
 
         it('there is at least a single .entry element', function(done){
-            expect(document.querySelector('article')).toHaveClass("entry");
-            done();
+            const entries = document.querySelectorAll('.feed .entry');
+            expect(entries.length).toBeGreaterThan(0);
         });
  
     });
